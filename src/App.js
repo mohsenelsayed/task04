@@ -1,26 +1,49 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Members from './components/Members';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+let membersData = [
+  {
+    id: 1,
+    name: "Mohsen",
+    committee: "Technical"
+  },
+  {
+    id: 2,
+    name: "Mohamed",
+    committee: "Media"
+  },
+  {
+    id: 3,
+    name: "Sobhy",
+    committee: "Events"
+  },
+  {
+    id: 4,
+    name: "Kareem",
+    committee: "Events"
+  },
+  {
+    id: 5,
+    name: "Khaled",
+    committee: "Technical"
+  },
+  {
+    id: 6,
+    name: "Adel",
+    committee: "Training"
+  }
+];
+
+export default class App extends React.Component{
+  state = {
+    members: membersData
+  }
+
+  render() {
+    return(
+      <div className="members">
+        <Members members={this.state.members} />
+      </div>
+    );
+  }
 }
-
-export default App;
