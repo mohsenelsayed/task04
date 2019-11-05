@@ -26,7 +26,7 @@ export default class App extends React.Component{
     console.log(this.state.members);
   }
   searchValChange = (e) =>{
-    if(e.target.value.length === 0 || e.target.value === '0' || e.target.value >= this.state.members.length){
+    if(e.target.value.length === 0 || e.target.value === '0' || e.target.value > this.state.members.length){
 
     }else{
       this.setState({members: membersData, searchVal : Number(e.target.value)-1});

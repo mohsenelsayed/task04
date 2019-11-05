@@ -65,4 +65,5 @@ nav form{
 .member-form *{
   display: block;
   margin: 10px auto;
+  text-align: center;
 }
